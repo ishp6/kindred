@@ -1,3 +1,5 @@
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://kindred-sigma-topaz.vercel.app/)
+
 # Mine or Borrowed
 
 A guided check-in for empaths: name a feeling, trace where it came from, find out if it's yours or borrowed, then breathe and set it down.
