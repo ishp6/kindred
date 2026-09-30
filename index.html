@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mine or Borrowed</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c" aria-hidden="true"></canvas>
+
+<section class="step on" id="intro">
+  <h1>Mine or borrowed?</h1>
+  <p>Some feelings are yours. Some you picked up from someone else just by being near them. Let's find out which this one is, then set it down gently.</p>
+  <button class="btn" data-go="feel">Begin</button>
+</section>
+
+<section class="step" id="feel">
+  <h2>What are you feeling right now?</h2>
+  <div class="chips" id="feelChips" role="group" aria-label="Feelings"></div>
+  <textarea id="feelText" rows="2" placeholder="Or say it in your own words" aria-label="Your own words"></textarea>
+  <button class="btn" id="feelNext" disabled>Continue</button>
+</section>
+
+<section class="step" id="src">
+  <h2>Where did it show up?</h2>
+  <p>Think about the moment you first noticed it.</p>
+  <div class="chips" id="srcChips" role="group" aria-label="Where it showed up"></div>
+  <button class="btn" id="srcNext" disabled>Continue</button>
+</section>
+
+<section class="step" id="when">
+  <h2>Was it here before that moment?</h2>
+  <div class="choices" id="whenChoices"></div>
+</section>
+
+<section class="step" id="verdict">
+  <span class="tag" id="vTag"></span>
+  <h2 id="vTitle"></h2>
+  <p id="vText"></p>
+  <button class="btn" data-go="breathe">Breathe with me</button>
+</section>
+
+<section class="step" id="breathe">
+  <h2 id="bText">Get comfortable</h2>
+  <div class="orb" id="orb"></div>
+  <button class="btn" id="bDone" hidden>Set it down</button>
+  <button class="link" id="bSkip">Skip breathing</button>
+</section>
+
+<section class="step" id="release">
+  <div class="word" id="word"></div>
+  <p id="rText"></p>
+</section>
+
+<section class="step" id="close">
+  <h2 id="cTitle">That's enough for now.</h2>
+  <p id="cText"></p>
+  <p id="cPattern"></p>
+  <button class="btn" id="again">Check in again</button>
+  <button class="link" id="clear">Clear my history</button>
+</section>
+
+<div class="note">A space for reflection, not a substitute for care. If it all feels too heavy, reach out to someone you trust.</div>
+
+<script src="script.js"></script>
+</body>
+</html>
